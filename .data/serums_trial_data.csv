@@ -1,0 +1,15 @@
+text
+pacient dm patnr patient id number
+pacient dm vname name
+pacient dm gbdat date born
+patient adress dm patnr patient id number
+patient adress dm pstlz postal code
+patient adress dm stras streeet floor
+episode dm einri medical center
+episode dm falnr unique episode identifier
+episode dm patnr unique patient identifier
+episode dm bekat category treatment append 1
+episode dm einzg health sector
+episode dm statu status episode
+episode dm enddt date end episode
+episode dm erdat date creation episode

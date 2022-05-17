@@ -1,0 +1,20 @@
+category,text
+key,pacient dm patnr patient id number
+person,pacient dm gschl genere sex
+person,pacient dm nname first surname
+person,pacient dm vname name
+person,pacient dm gbdat date born
+key,patient adress dm patnr patient id number
+location,patient adress dm pstlz postal code
+location,patient adress dm stras streeet floor
+location,patient adress dm land patient country residence
+key,episode dm einri medical center
+key,episode dm falnr unique episode identifier
+event,episode dm falar type episode
+key,episode dm patnr unique patient identifier
+event,episode dm bekat category treatment append 1
+event,episode dm einzg health sector
+event,episode dm statu status episode
+event,episode dm krzan quick admission indicator
+time,episode dm enddt date end episode
+time,episode dm erdat date creation episode

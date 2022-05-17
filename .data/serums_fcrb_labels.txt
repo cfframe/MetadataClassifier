@@ -1,0 +1,6 @@
+index,category
+0,event
+1,key
+2,location
+3,person
+4,time

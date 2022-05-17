@@ -1,0 +1,17 @@
+# Assume python>=3.7
+matplotlib~=3.5.1
+nltk~=3.6.7
+numpy~=1.22.0
+pandas~=1.4.0               # was 1.3.4
+Pillow~=9.0.0
+tqdm~=4.62.3
+scikit-learn~=1.0.1
+scikit-image~=0.19.1
+transformers~=4.15.0
+
+# PyTorch
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch~=1.10.1
+torchvision
+
+

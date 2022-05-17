@@ -1,0 +1,90 @@
+category,text
+key,pacient dm patnr patient id number
+person,pacient dm gschl genere sex
+person,pacient dm nname first surname
+person,pacient dm vname name
+person,pacient dm gbdat date born
+person,pacient dm gbnam second surname
+person,pacient dm namzu  sr sra naming
+person,pacient dm glrand patient nationality
+person,pacient dm famst patient civil state
+person,pacient dm telf1 patient telephone
+person,pacient dm rvnum social healthcare number
+key,patient adress dm patnr patient id number
+location,patient adress dm pstlz postal code
+location,patient adress dm stras streeet floor
+location,patient adress dm land patient country residence
+location,patient adress dm ort town
+location,patient adress dm floor floor
+location,patient adress dm adrnr house number
+key,episode dm einri medical center
+key,episode dm falnr unique episode identifier
+event,episode dm falar type episode
+key,episode dm patnr unique patient identifier
+event,episode dm bekat category treatment append 1
+event,episode dm einzg health sector
+event,episode dm statu status episode
+event,episode dm krzan quick admission indicator
+time,episode dm enddt date end episode
+time,episode dm erdat date creation episode
+key,episode dm pernr id professional created registry
+event,episode dm storn indicator anulation
+time,episode dm begdt date start episode
+event,episode dm casetx type episode append 2
+event,episode dm fatxt speciality organizatoy unit append 3
+event,episode dm enddtx type end episode append 4
+key,diagnostic dm einri medical centre
+key,diagnostic dm patnr unique patient identifier
+key,diagnostic dm falnr unique episode identifier
+event,diagnostic dm lfdnr number actual diagnostic
+event,diagnostic dm dkey1 code diagnostic append 9
+key,diagnostic dm pernr professional unique identifier
+key,order entry dm einri medical centre
+key,order entry dm falnr patient id episode
+event,order entry dm idodr unique identifier order entry
+key,order entry dm patnr patient id number
+key,order entry dm pernr professional unique identifier
+time,order entry dm erdat date creation registry
+key,order entry dm orgid medical specialist plus place work
+key,vital signs dm patnr unique patient identifier
+key,vital signs dm falnr unique episode identifier
+event,vital signs dm idvs unique identifier vital sign
+key,vital signs dm vppid id vital parameter append 10
+event,vital signs dm dttyp type data parameter
+time,vital signs dm erdat date creation record
+event,vital signs dm typevs place record vital sig append 11
+event,vital signs dm vwert value parameter
+event,vital signs dm vbem comment
+key,monitoring parameters dm patnr unique patient identifier
+key,monitoring parameters dm falnr unique episode identifier
+key,monitoring parameters dm vppid id vital parameter append 10
+key,monitoring parameters dm pernr professional unique identifier
+event,monitoring parameters dm vbem comment
+time,monitoring parameters dm datyp date creation registry
+event,monitoring parameters dm wertogr superior limit normal area
+event,monitoring parameters dm wertugr inferior limit normal area
+event,monitoring parameters dm wertmax max value warning area
+event,monitoring parameters dm wertmin minimum value warning area
+key,professional dm pernr personal unique identifier
+person,professional dm erusr username professional
+key,professional dm orgid medical specialist plus place work
+person,professional dm gbdat date birth
+time,professional dm begdt start validity record
+time,professional dm enddt end validity record
+time,professional dm erdat date creation record
+person,professional dm rank jerarchy append 8
+key,medication dm einri medical center
+key,medication dm patnr unique patient identifier
+key,medication dm falnr unique episode identifier
+key,medication dm pernr professional unique identifier
+event,medication dm motx medication description prescription append 6
+event,medication dm mostx medication prescription comment
+event,medication dm motypid medication type prescription
+event,medication dm mpresnr medication id prescription profile
+time,medication dm erdat date creation registry
+event,medication dm storn identifier nullification
+event,medication dm stusr professional id responsible anulation
+time,medication dm stdat date anulation
+event,medication dm stoid reason anulation append 7
+key,medical especiality dm orgid medical specialists plus place work eg cardiology ambulatory care see append 5
+person,medical especiality dm orgna medical specialty name

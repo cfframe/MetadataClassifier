@@ -1,0 +1,211 @@
+category,text
+key,pacient dm patnr patient id number
+person,pacient dm gschl genere sex
+person,pacient dm nname first surname
+person,pacient dm vname name
+person,pacient dm gbdat date born
+person,pacient dm gbnam second surname
+person,pacient dm namzu  sr sra naming
+person,pacient dm glrand patient nationality
+person,pacient dm famst patient civil state
+person,pacient dm telf1 patient telephone
+person,pacient dm rvnum social healthcare number
+key,patient adress dm patnr patient id number
+location,patient adress dm pstlz postal code
+location,patient adress dm stras streeet floor
+location,patient adress dm land patient country residence
+location,patient adress dm ort town
+location,patient adress dm floor floor
+location,patient adress dm adrnr house number
+key,episode dm einri medical center
+key,episode dm falnr unique episode identifier
+event,episode dm falar type episode
+key,episode dm patnr unique patient identifier
+event,episode dm bekat category treatment append 1
+event,episode dm einzg health sector
+event,episode dm statu status episode
+event,episode dm krzan quick admission indicator
+time,episode dm enddt date end episode
+time,episode dm erdat date creation episode
+key,episode dm pernr id professional created registry
+event,episode dm storn indicator anulation
+time,episode dm begdt date start episode
+event,episode dm casetx type episode append 2
+event,episode dm fatxt speciality organizatoy unit append 3
+event,episode dm enddtx type end episode append 4
+key,diagnostic dm einri medical centre
+key,diagnostic dm patnr unique patient identifier
+key,diagnostic dm falnr unique episode identifier
+event,diagnostic dm lfdnr number actual diagnostic
+event,diagnostic dm dkey1 code diagnostic append 9
+key,diagnostic dm pernr professional unique identifier
+key,order entry dm einri medical centre
+key,order entry dm falnr patient id episode
+event,order entry dm idodr unique identifier order entry
+key,order entry dm patnr patient id number
+key,order entry dm pernr professional unique identifier
+time,order entry dm erdat date creation registry
+key,order entry dm orgid medical specialist plus place work
+key,vital signs dm patnr unique patient identifier
+key,vital signs dm falnr unique episode identifier
+event,vital signs dm idvs unique identifier vital sign
+key,vital signs dm vppid id vital parameter append 10
+event,vital signs dm dttyp type data parameter
+time,vital signs dm erdat date creation record
+event,vital signs dm typevs place record vital sig append 11
+event,vital signs dm vwert value parameter
+event,vital signs dm vbem comment
+key,monitoring parameters dm patnr unique patient identifier
+key,monitoring parameters dm falnr unique episode identifier
+key,monitoring parameters dm vppid id vital parameter append 10
+key,monitoring parameters dm pernr professional unique identifier
+event,monitoring parameters dm vbem comment
+time,monitoring parameters dm datyp date creation registry
+event,monitoring parameters dm wertogr superior limit normal area
+event,monitoring parameters dm wertugr inferior limit normal area
+event,monitoring parameters dm wertmax max value warning area
+event,monitoring parameters dm wertmin minimum value warning area
+key,professional dm pernr personal unique identifier
+person,professional dm erusr username professional
+key,professional dm orgid medical specialist plus place work
+person,professional dm gbdat date birth
+time,professional dm begdt start validity record
+time,professional dm enddt end validity record
+time,professional dm erdat date creation record
+person,professional dm rank jerarchy append 8
+key,medication dm einri medical center
+key,medication dm patnr unique patient identifier
+key,medication dm falnr unique episode identifier
+key,medication dm pernr professional unique identifier
+event,medication dm motx medication description prescription append 6
+event,medication dm mostx medication prescription comment
+event,medication dm motypid medication type prescription
+event,medication dm mpresnr medication id prescription profile
+time,medication dm erdat date creation registry
+event,medication dm storn identifier nullification
+event,medication dm stusr professional id responsible anulation
+time,medication dm stdat date anulation
+event,medication dm stoid reason anulation append 7
+key,medical especiality dm orgid medical specialists plus place work eg cardiology ambulatory care see append 5
+person,medical especiality dm orgna medical specialty name
+key,pathology tayside departmentcode code identifies department separate departments ninewells ns ninewells surgical nc ninewells cytology ps pri surgical pc pri cytology combined 2005 ps pc codes retired
+key,pathology tayside anospecimennumber field represents anonymised specimen number
+key,pathology tayside prochi anonymised patient identifier
+time,pathology tayside dateofspecimen field represents date procedure produced specimen
+time,pathology tayside dateofreceipt field beginning 2016 reflected date request booked lims 2016 onwards date request received department
+time,pathology tayside datebookedin field represents date request booked lims end 2015 field identical date received field beginning 2016 may differ
+time,pathology tayside dateauthorised field represents date first authorisation report request
+time,pathology tayside datelastauthorised field represents date recent authorisation report request majority cases identical date authorised date differs likely caused production supplementary report information occasionally report amended correct clarify information sometimes administration purposes obvious change data
+event,pathology tayside allspecimentypecodes specimens field entry request comprise number specimens field contains codes specimens based attempt best describe tissue sent
+event,pathology tayside alldiagnosiscodes snomed codes applied pathologist best describe tissue code diagnosis code usually e f code within limits system snomed version using date snomed ii rather old system likely replaced soon
+event,pathology tayside resulttextlarge field represents test results seperated form
+key,haematology lab data restruct prochi anonymised patient identifier
+key,haematology lab data restruct labnumber part internal hic primary key used linking labs data together unique identifier assigned lab system field used communicating record specific queries hic allows us locate record question
+key,haematology lab data restruct testreportid field represents unique number patient test anonymised extraction
+key,haematology lab data restruct patientid community health index chi number unique personal identifier allocated patient first registration gp practice follows format ddmmyyrrgc ddmmyy represents persons date birth rr random digits g another random digit acts gender identifier odd numbers indicate males even numbers indicate females final digit arithmetical check digit
+key,haematology lab data restruct providingorganisationid id organisation providing test results
+location,haematology lab data restruct providingorganisationname name organisation providing test results maybe include location well service name example ninewell tayside clinical lab services
+location,haematology lab data restruct providingorganisationtype type organisation providing test results legacy data contains either hospital hic data pre98 hospital hic data post98 appropriate
+key,haematology lab data restruct requestingpartyid column description available
+person,haematology lab data restruct requestingpartyposition position held party requesting test results example might gp consultant
+person,haematology lab data restruct requestingpartyname column description available
+person,haematology lab data restruct requestingpartystatus column description available
+key,haematology lab data restruct requestingorganisationid column description available
+person,haematology lab data restruct requestingorganisationname laboratory providing sample legacy data contains record source example ninewells data prior pinnacle perth masterlab perth data ilims system ninewells pinnacle data
+person,haematology lab data restruct requestingorganisationstatus column description available
+person,haematology lab data restruct requestingorganisationtype type organisation requestor part contains values hospital practice ward
+person,haematology lab data restruct discipline discipline code laboratory test biochemistry tests discipline code cc represents clinical chemistry
+event,haematology lab data restruct clinicaldatarequired contains comments original requestor may give reason requesting test comments condition last eaten etc field populated legacy data
+location,haematology lab data restruct hb_extract alpha numeric health board code patient chi information extracted
+event,haematology lab data restruct quantityvalue result test carried field contains numeric data
+event,haematology lab data restruct quantityunit units measure test result quantityvalue field
+event,haematology lab data restruct arithmeticcomparator field contains additional information used conjunction numeric result field quantityvalue contents interpreted along quantityvalue example egfr results may reported quantityvalue 60 arithmeticcomparator means result greater 60
+object,haematology lab data restruct rangehighvalue maximum guideline value test result time testing hic observation ranges vary based relevant criteria age gender guidelines also change time
+object,haematology lab data restruct rangelowvalue minimum guideline value test result time testing hic observation ranges vary based relevant criteria age gender guidelines also change time
+object,haematology lab data restruct rangeunit units guideline values presented rangehighvalue rangelowvalue fields hic observation dont assume units match quantityvalue unit
+event,haematology lab data restruct interpretation contains comments regarding result
+key,haematology lab data restruct localclinicalcodevalue field store test code test taken performed e g chol cholesterol used providing organisation note ield always completed legacy data mapping field rerplaces test code
+object,haematology lab data restruct localclinicalcodescheme column description available
+key,haematology lab data restruct localclinicalcodeschemeid column description available
+object,haematology lab data restruct localclinicalcodedescription description localclinicalcode
+key,haematology lab data restruct readcodevalue read code allocated test field useful standardised grouping tests example looking serum total cholesterol records marked 44p represent regardless localclinicalcode proivided hic observation restructuring significantly improved quality accuracy field legacy data field completion rates much greater 95 legacy results featuring read code hic also developed lookup table used throughout data project lifecycle released along data set
+object,haematology lab data restruct readcodescheme read code scheme used local lab system read code fields e g r1
+object,haematology lab data restruct readcodedescription textual description supplied local lab systems relevant read code hic observation field appears mapped read code standard mapping read code description often changes possibly time versions read code example 44p may described serum total cholesterol total cholesterol different records
+event,haematology lab data restruct clinicalcircumstancedescription textual description supplied local lab systems
+key,haematology lab data restruct testresultorder part internal hic primary key used linking labs data together field used communicating record specific queries hic allows us locate record question unique identifier assigned lab system based order tests run sample legacy data ts 07 value field imputed
+key,haematology lab data restruct hic_resultid column description available
+key,haematology lab data restruct hic_dataloadrunid column description available
+time,haematology lab data restruct hic_validfrom date record loaded hic live hic data repository
+event,haematology lab data restruct samplename indicates type sample taken test sample types include b blood c cerebrospinal fa faeces f fluid fo floride oxalate h hair li liver biopsy miscellaneous mu muscle biopsy sk skin biopsy st stone sw sweat u urine w water also include full textual descriptions
+time,haematology lab data restruct datetimesampled date time sample taken patient
+time,haematology lab data restruct datetimereceived column description available
+event,haematology lab data restruct samplerequestercomment column description available
+event,haematology lab data restruct serviceprovidercomment legacy data field tells samplename field derived samplename completed decision original sample type take coded follows rca sample derived hics read code analysis workshops hic assisted researchers clinicians validated taysdie laboratory experts used available data assign standardisaed read codes large portion data 95 samplename derived allocated read code header lkp legacy sample header legacy hic lookup value relevant test code matched lkp header legacy sample header consisted multiple values e g b u fo contained hic lookup value e g blood relevant test code example final samplename value would blood header information available legacy sample header type lkp information available legacy hic lookup sample type relevant test code samplename unknown lkp header information stored either legacy header look test code header legacy header sample type provided ambiguoius e g b fo original value recorded field example stored value would header b fo header lookup legacy header sample type provide conflicting values field also records original values
+event,haematology lab data restruct testset_clinicalcircumstancedescription textual description supplied local lab systems
+key,haematology lab data restruct testset_readcodevalue read code allocated test field useful standardised grouping tests example looking serum total cholesterol records marked 44p represent regardless localclinicalcode provided hic observation restructuring significantly improved quality accuracy field legacy data field completion rates much greater 95 legacy results featuring read code hic also developed lookup table used throughout data project lifecycle released along data set
+object,haematology lab data restruct testset_readcodescheme read code scheme used local lab system read code fields e g r1
+object,haematology lab data restruct testset_readcodedescription field represents read code description
+object,haematology lab data restruct testset_localclinicalcodedescription description localclinicalcode
+key,haematology lab data restruct testset_localclinicalcodevalue field store test code test taken performed e g chol cholesterol used providing organisation note field always completed legacy data mapping field replaces test code
+object,haematology lab data restruct testset_localclinicalcodescheme column description available
+key,haematology lab data restruct testset_localclinicalcodeschemeid column description available
+key,haematology lab data restruct testidentifier field represents unique number patient test anonymised extraction
+object,microbiology tayside tests testcode_desc field represents description testcode
+key,microbiology tayside tests prochi anonymised patient identifier
+time,microbiology tayside tests sampleyear column description available
+time,microbiology tayside tests sampledate column description available
+key,microbiology tayside tests specimenno field represents alphanumeric specimen number specimen number unique first part date department e g 06b second part number starts 100000 000001 every year combination unique 2106
+key,microbiology tayside tests testcode field represents microbiology test code performed e g bc blood cultures gen genotype
+event,microbiology tayside tests result field represents result may contain text based results historically truncated investigated source data nhst lab also truncated
+event,microbiology tayside tests result_original column description available
+key,immunology extractable immuno prochi anonymised patient identifier
+key,immunology extractable immuno hb_extract field represents alpha numeric health board code patient chi information extracted
+time,immunology extractable immuno sample_date field indicates date sample taken format dd mmm yyyy e g 12 oct 2011 note new system 99 time element included aswell date
+object,immunology extractable immuno sample_type field represents type sample taken test pre 2005 sample type
+object,immunology extractable immuno test_code field represents code test taken performed e g chla chlamydia pcr
+location,immunology extractable immuno localclinicalcodedescription field represents description localclinicalcode
+event,immunology extractable immuno result field represents result test done decimal format
+event,immunology extractable immuno hic_derivedresult due combination old new data actual result field spread across three columns result interpretation new system origresult old system cases least 1 value one columns derived column selects appropriate value 3 columns also supplied seperately single column ease access
+event,immunology extractable immuno origresult field represents original result field lab system hic extracts decimal part puts result field non numeric values go comment field tests results recorded gt lt negative positive eg gt60 egfr tests field used
+event,immunology extractable immuno comment field represents additional information laboratory system free text might contain additional information laboratory test
+event,immunology extractable immuno source_code field represents code test done e g n1 nw ward 1 field contain practice codes test performed practice
+key,immunology extractable immuno lab_number field represents unique internal number assigned masterlab system used hic referring back individual laboratory results
+object,immunology extractable immuno units field represents units test code e g hgb g dl
+object,immunology extractable immuno low field represents normal lower limit laboratory test based patient age sex
+object,immunology extractable immuno high field represents normal upper limit laboratory test based patient age sex
+event,immunology extractable immuno lab_system field represents lab system source data came dataset manually changed thomas nind 1 old system old legacy data held hic 99 new system data loaded properly gordon mcallistar sci store tayside fife
+key,immunology extractable immuno readcodevalue read code allocated test field useful standardised grouping tests example looking serum total cholesterol records marked 44p represent regardless localclinicalcode provided hic observation restructuring significantly improved quality accuracy field legacy data field completion rates much greater 95 legacy results featuring read code hic also developed lookup table used throughout data project lifecycle released along data set
+object,immunology extractable immuno readcodedescription textual description supplied local lab systems relevant read code hic observation field appears mapped read code standard mapping read code description often changes possibly time versions read code example 44p may described serum total cholesterol total cholesterol different records
+event,immunology extractable immuno interpretation field represents comments regarding result free text
+key,biochemistry lab data restruc prochi anonymised patient identifier
+key,biochemistry lab data restruc labnumberidentifiable field represents lab number
+object,biochemistry lab data restruc clinicaldatarequired contains comments original requestor may give reason requesting test comments condition last eaten etc field populated legacy ts 07 data
+key,biochemistry lab data restruc providingorganisationid id short name organisation providing test results e g ninewells full name see providingorganisationname
+location,biochemistry lab data restruc providingorganisationname local name organisation providing test results maybe include location well service name example ninewell tayside clinical lab services
+location,biochemistry lab data restruc providingorganisationtype type organisation providing test results example hospital legacy ts 07 data contains either hospital hic data pre98 hospital hic data post98 appropriate
+person,biochemistry lab data restruc requestingpartyposition position held party requesting test results example might gp consultant
+location,biochemistry lab data restruc requestingorganisationname laboratory providing sample legacy data contains record source example ninewells data prior pinnacle perth masterlab perth data ilims system ninewells pinnacle data
+location,biochemistry lab data restruc requestingorganisationtype type organisation requestor part contains values hospital practice ward
+object,biochemistry lab data restruc discipline discipline code laboratory test biochemistry tests discipline code cc represents clinical chemistry
+person,biochemistry lab data restruc hb_extract alpha numeric health board code patient chi information extracted
+object,biochemistry lab data restruc quantityvalue result test carried field contains numeric data
+object,biochemistry lab data restruc quantityunit units measure test result quantityvalue field
+object,biochemistry lab data restruc arithmeticcomparator fieldrepresents additional information used conjunction numeric result field quantityvalue contents interpreted along quantityvalue example egfr results may reported quantityvalue 60 arithmeticcomparator means result greater 60
+object,biochemistry lab data restruc rangehighvalue maximum guideline value test result time testing hic observation ranges vary based relevant criteria age gender guidelines also change time
+object,biochemistry lab data restruc rangelowvalue minimum guideline value test result time testing hic observation ranges vary based relevant criteria age gender guidelines also change time
+object,biochemistry lab data restruc rangeunit units guideline values presented rangehighvalue rangelowvalue fields hic observation dont assume units match quantityvalue unit
+object,biochemistry lab data restruc interpretation contains comments regarding result
+key,biochemistry lab data restruc localclinicalcodevalue field store test code test taken performed e g chol cholesterol used providing organisation note field always completed legacy data mapping field replaces test code
+event,biochemistry lab data restruc localclinicalcodedescription description localclinicalcode
+event,biochemistry lab data restruc readcodevalue read code allocated test field useful standardised grouping tests example looking serum total cholesterol records marked 44p represent regardless localclinicalcode provided hic observation restructuring significantly improved quality accuracy field legacy data field completion rates much greater 95 legacy results featuring read code hic also developed lookup table used throughout data project lifecycle released along data set
+event,biochemistry lab data restruc readcodescheme read code scheme used local lab system read code fields e g r1
+event,biochemistry lab data restruc readcodedescription textual description supplied local lab systems relevant read code hic observation field appears mapped read code standard mapping read code description often changes possibly time versions read code example 44p may described serum total cholesterol total cholesterol different records
+event,biochemistry lab data restruc clinicalcircumstancedescription textual description supplied local lab systems
+key,biochemistry lab data restruc testresultorder part internal hic primary key used linking labs data together field used communicating record specific queries hic allows us locate record question unique identifier assigned lab system based order tests run sample legacy data ts 07 value field imputed
+key,biochemistry lab data restruc labnumber part internal hic primary key used linking labs data together unique identifier assigned lab system field used communicating record specific queries hic allows us locate record question
+key,biochemistry lab data restruc testreportid part internal hic primary key used linking labs data together unique identifier assigned lab system field used communicating record specific queries hic allows us locate record question legacy data tayside 2007 value field constant
+event,biochemistry lab data restruc samplename indicates type sample taken test sample types include blood cerebrospinal faeces fluid fluoride oxalate hair liver biopsy miscellaneous muscle biopsy serum skin biopsy stone sweat urine water hic observation tayside labs report serum blood samples samplename blood read code value description used interpret sample correctly confirmed tayside lab experts
+time,biochemistry lab data restruc datetimesampled date time sample taken patient
+event,biochemistry lab data restruc samplerequestercomment field free text
+event,biochemistry lab data restruc serviceprovidercomment legacy data field tells samplename field derived samplename completed decision original sample type take coded follows rca sample derived hics read code analysis workshops hic assisted researchers clinicians validated tayside laboratory experts used available data assign standardised read codes large portion data 95 samplename derived allocated read code header lkp legacy sample header legacy hic lookup value relevant test code matched lkp header legacy sample header consisted multiple values e g b u fo contained hic lookup value e g blood relevant test code example final samplename value would blood header information available legacy sample header type lkp information available legacy hic lookup sample type relevant test code samplename unknown lkp header information stored either legacy header look test code header legacy header sample type provided ambiguous e g b fo original value recorded field example stored value would header b fo header lookup legacy header sample type provide conflicting values field also records original values
+key,biochemistry lab data restruc testidentifier part internal hic primary key used linking labs data together unique identifier assigned lab system field used communicating record specific queries hic allows us locate record question

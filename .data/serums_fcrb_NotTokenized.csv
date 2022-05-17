@@ -1,0 +1,90 @@
+category,text
+key,Pacient DM patnr Patient ID Number
+person,Pacient DM gschl Genere  Sex 
+person,Pacient DM nname First surname
+person,Pacient DM vname Name
+person,Pacient DM gbdat Date of born
+person,Pacient DM gbnam Second surname
+person,Pacient DM namzu    Sr or Sra naming
+person,Pacient DM glrand Patient nationality 
+person,Pacient DM famst Patient civil state
+person,Pacient DM telf1  Patient telephone
+person,Pacient DM rvnum Social Healthcare number
+key,Patient Adress DM patnr Patient ID Number
+location,Patient Adress DM pstlz Postal Code
+location,Patient Adress DM stras Streeet and floor
+location,Patient Adress DM land Patient country of residence
+location,Patient Adress DM ort Town
+location,Patient Adress DM floor  Floor
+location,Patient Adress DM adrnr House number 
+key,Episode DM einri Medical center
+key,Episode DM falnr Unique episode identifier
+event,Episode DM falar Type of episode
+key,Episode DM patnr Unique patient identifier
+event,Episode DM bekat Category of treatment  APPEND 1
+event,Episode DM einzg Health sector
+event,Episode DM statu Status of the episode
+event,Episode DM krzan Quick admission indicator
+time,Episode DM enddt Date of end of the episode
+time,Episode DM erdat Date of the creation of the episode
+key,Episode DM pernr ID of the professional that created the registry
+event,Episode DM storn Indicator of anulation 
+time,Episode DM begdt Date of the start of the episode
+event,Episode DM casetx Type of episode APPEND 2
+event,Episode DM fatxt Speciality for organizatoy unit APPEND 3
+event,Episode DM enddtx Type of end of episode APPEND 4
+key,Diagnostic DM einri Medical Centre
+key,Diagnostic DM patnr Unique patient identifier
+key,Diagnostic DM falnr Unique episode identifier
+event,Diagnostic DM lfdnr Number of actual diagnostic
+event,Diagnostic DM dkey1 Code of a diagnostic APPEND 9
+key,Diagnostic DM pernr Professional unique identifier
+key,Order Entry DM einri Medical Centre
+key,Order Entry DM falnr Patient ID Episode
+event,Order Entry DM idodr Unique identifier for order entry
+key,Order Entry DM patnr Patient ID Number
+key,Order Entry DM pernr Professional unique identifier
+time,Order Entry DM erdat Date of the creation of the registry
+key,Order Entry DM orgid Medical specialist plus place of work 
+key,Vital Signs DM patnr Unique patient identifier
+key,Vital Signs DM falnr Unique episode identifier
+event,Vital Signs DM idvs Unique identifier of vital sign
+key,Vital Signs DM vppid ID vital parameter APPEND 10
+event,Vital Signs DM dttyp Type of data of the parameter
+time,Vital Signs DM erdat Date of the creation of the record
+event,Vital Signs DM typevs Place of record of the vital sig  APPEND 11
+event,Vital Signs DM vwert Value of the parameter
+event,Vital Signs DM vbem Comment
+key,Monitoring Parameters DM patnr Unique patient identifier
+key,Monitoring Parameters DM falnr Unique episode identifier
+key,Monitoring Parameters DM vppid ID vital parameter APPEND 10
+key,Monitoring Parameters DM pernr Professional unique identifier
+event,Monitoring Parameters DM vbem Comment
+time,Monitoring Parameters DM datyp Date of the creation of the registry
+event,Monitoring Parameters DM wertogr Superior limit of normal area
+event,Monitoring Parameters DM wertugr Inferior limit of normal area
+event,Monitoring Parameters DM wertmax Max value of the warning area
+event,Monitoring Parameters DM wertmin Minimum value of the warning area
+key,Professional DM pernr Personal unique identifier
+person,Professional DM erusr Username of the professional
+key,Professional DM orgid Medical specialist plus place of work 
+person,Professional DM gbdat Date of birth
+time,Professional DM begdt Start of the validity of the record 
+time,Professional DM enddt End of the validity of the record 
+time,Professional DM erdat Date of the creation of the record 
+person,Professional DM rank Jerarchy  APPEND 8
+key,Medication DM einri Medical Center
+key,Medication DM patnr Unique patient identifier
+key,Medication DM falnr Unique episode identifier
+key,Medication DM pernr Professional unique identifier
+event,Medication DM motx  Medication  description of the prescription APPEND 6
+event,Medication DM mostx Medication  Prescription  Comment  
+event,Medication DM motypid Medication  type of prescription
+event,Medication DM mpresnr Medication  id of the prescription profile
+time,Medication DM erdat Date of the creation of the registry
+event,Medication DM storn Identifier of nullification
+event,Medication DM stusr Professional id responsible of the anulation
+time,Medication DM stdat Date of anulation
+event,Medication DM stoid Reason of anulation APPEND 7
+key,Medical Especiality DM orgid Medical Specialists plus place of work  eg  Cardiology at ambulatory care   See APPEND 5
+person,Medical Especiality DM orgna Medical Specialty name
